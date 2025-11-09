@@ -1,0 +1,1 @@
+cmd_/home/pi/learn-kernel/04-character-device-driver/bai2/main.mod := { echo  /home/pi/learn-kernel/04-character-device-driver/bai2/main.o;  echo; } > /home/pi/learn-kernel/04-character-device-driver/bai2/main.mod

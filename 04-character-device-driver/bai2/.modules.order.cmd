@@ -1,0 +1,1 @@
+cmd_/home/pi/learn-kernel/04-character-device-driver/bai2/modules.order := {   echo /home/pi/learn-kernel/04-character-device-driver/bai2/main.ko; :; } | awk '!x[$$0]++' - > /home/pi/learn-kernel/04-character-device-driver/bai2/modules.order

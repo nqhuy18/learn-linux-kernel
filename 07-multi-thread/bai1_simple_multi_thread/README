@@ -1,0 +1,7 @@
+description:
+Create 9 threads in total, but allow only 7 threads to simulate writing to files concurrently.
+Each thread writes to exactly one file.
+
+how to run ?
+	1. make 
+	2. ./simaphore_mutex

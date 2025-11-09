@@ -1,0 +1,6 @@
+description:
+Create three 3 threads in total. Each thread increments the global variable cnt and writes the updated value to either file1 or file2.
+A semaphore is used to synchronize access to the shared variable across both files.
+how to run ?
+	1. make 
+	2. ./simaphore_mutex

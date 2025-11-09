@@ -1,0 +1,6 @@
+Client and server chat on the one device
+
+how to run
+make
+./server 
+./client (type message first)

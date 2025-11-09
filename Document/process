@@ -1,0 +1,62 @@
+1. Process là thực thể bắt đầu sử dụng tài nguyên của hệ điều hành ( CPU, Periperal,..)
+Điểm bắt đầu
+- Hàm main
+	+) Là điểm đầu tiên đi vào chương trình
+	+) Prototype: int main(int argc, char *argv[]);
+Điểm kết thúc:
+- Có nhiều cách để kết thúc chương trình:
+	+) Chủ động kết thúc (khi con trỏ NULL)
+	+) Bị động kết thúc  (Ctrl C, Kill -9)
+	
+Các tham số môi trường ảnh hưởng đến process: vs fopen("text.txt",'w')
+- Các tham số truyền vào main
+	+) argc là số tham số truyền vào
+	+) argv là chuỗi ký tự truyền vào
+-Environment list   
+	+) Store in a global variable extern char ** environ
+	+) Truy xuất thông qua hàm *getenv(Const char *name)
+BT: Hiển thị tên và giá trị của biến môi trường bằng C
+
+Memory Layout
+- Vùng text:
+	+) Lưu các hằng số, mã lệnh (instrucsion) VD: c = a + b sẽ lưu vào text, còn các địa chỉ lưu ở chỗ khác
+- Intialized data:
+	+) Các biến đã được khởi tạo
+- Unintialized data
+- Heap:
+- Stack 
+-Cấp phát động cho process
+	+) void *malloc(size_t size)
+	+) void free(void *ptr)
+- Shared library
+	+) Là các file binary được build từ code C
+	+) Khi hàm main gọi hàm A trong thư viện shared lib thì main sẽ tìm địa chỉ hàm A đã được load vào ram trước đó
+		Nhược: Chậm vì khi khi yêu cầu dùng thì mới đọc ổ cứng để tìm địa chỉ hàm khác với static lib thư viện được build sẵn trong hàm main 
+BT: image
+Process Control
+- Process identifier
+	+) A unique number
+- fork function
+	+) pid_t fork(void)
+	+ Tạo 1 bản sao cho cho bộ nhỡ hiện tại của process
+-int excel(const char *pathname, const char *arg0, /*(char *)0 */)
+Khoi tao process moi tuc chuong trinh nam tai pathname
+Sau khi goi ham exec, toan bo source code phia sau cua chuon trinh se khong duoc thuc hien nua
+
+- Khi process ket thuc, trang thai ket thuc cua no duoc tra ve cho process cha. Chi khi process cha appcept thong tin process gui ve, khi do OS moi thuc su free process con
+
+-wait function
+pid_t wait(int *wstatus)
++) Block process cho đến khi 1 trong các process con kết thúc
++) Thông tin trả về của process con được lưu vào con trỏ wstatus
+BT: image 
+
+Thay đổi user id vào group id
+- int setuid(uid t uid)
+- int setgid(gid_t gid)
+EX: image
+
+Ngôn ngữ biên dịch: cần qua bước dịch mà C qua mã máy truowsc khi nạp và MCU
+Ngôn ngữ thông dịch: Nạp chuong trình thông dịch vào MCU trước sau đó nó sẽ đọc file code để thực thi   
+- Run comman line trong C
+	+) int system(const char *command) 

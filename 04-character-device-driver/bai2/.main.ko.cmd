@@ -1,0 +1,1 @@
+cmd_/home/pi/learn-kernel/04-character-device-driver/bai2/main.ko := ld -r -EL  -maarch64elf -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/pi/learn-kernel/04-character-device-driver/bai2/main.ko /home/pi/learn-kernel/04-character-device-driver/bai2/main.o /home/pi/learn-kernel/04-character-device-driver/bai2/main.mod.o;  true

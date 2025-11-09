@@ -1,0 +1,2 @@
+/home/pi/learn-kernel/04-character-device-driver/bai2/main.o
+

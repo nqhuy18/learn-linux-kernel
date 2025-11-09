@@ -1,0 +1,1 @@
+cmd_/home/pi/learn-kernel/04-character-device-driver/bai2/Module.symvers := sed 's/\.ko$$/\.o/' /home/pi/learn-kernel/04-character-device-driver/bai2/modules.order | scripts/mod/modpost -m -a  -o /home/pi/learn-kernel/04-character-device-driver/bai2/Module.symvers -e -i Module.symvers   -T -
