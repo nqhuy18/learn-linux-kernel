@@ -8,7 +8,7 @@
 #include <arpa/inet.h> 
 
 #define PORT 8080 
-#define IP "10.145.80.191"
+#define IP "192.168.0.100"
 
 int main(int argc, char const *argv[]) 
 {
@@ -36,6 +36,7 @@ int main(int argc, char const *argv[])
 
 	if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) 
 	{ 
+		printf("\nNot connected\n"); 
 	    return -1; 
 	}     
     char send_buff[1000];

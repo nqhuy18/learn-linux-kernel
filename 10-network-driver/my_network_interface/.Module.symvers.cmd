@@ -1,0 +1,1 @@
+savedcmd_/home/nqh/learn-linux-kernel/10-network-driver/my_network_interface/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/nqh/learn-linux-kernel/10-network-driver/my_network_interface/Module.symvers -T /home/nqh/learn-linux-kernel/10-network-driver/my_network_interface/modules.order -i Module.symvers -e 

@@ -46,7 +46,7 @@ void* thread(void* arg)
 	//wait 
 	sem_wait(&sem_write); 
 
-	write_to_file(5);
+	write_to_file(7);
 
 	sem_post(&sem_write); 
 }
@@ -56,7 +56,7 @@ int main()
 	pthread_t t[10];
 	int i = 0, nthread = 9;
 	pthread_mutex_init(&lock_valid_file, NULL );
-	sem_init(&sem_write, 0, 7); 
+	sem_init(&sem_write, 0, 5); 
 
 
 	for (i = 0 ; i < nthread ; i ++)
