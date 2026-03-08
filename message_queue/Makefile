@@ -1,0 +1,6 @@
+all:
+	gcc -o producer producer.c
+	gcc -o consumer consumer.c
+
+clean:
+	rm -f producer consumer

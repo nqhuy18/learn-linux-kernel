@@ -1,0 +1,2 @@
+Viết 1 chương trình C sleep vô thời hạn, 
+sử dụng 1 chương trình C khác gửi signal để wakeup chương trình C đầu tiên lên.
